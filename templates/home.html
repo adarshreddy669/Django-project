@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content %}
+<h1 style="text-align:center">Hello {{name}}</h1>
+<h1><P style="text-align:center">This is a sample page, that print the operations of two numbers</p></h2>
+
+<form action="add" style="text-align:center" method="post">
+    {% csrf_token %}
+    <u><div><p style="color:red">Addition of two numbers</p></div></u>
+    <br>
+    <div>Enter 1st number <input type="text" name="num1"></div>
+    <br>
+    <div>Enter 2nd number <input type="text" name="num2"></div>
+    <br>
+    <div><input type="submit"></div>
+    <br>
+</form>
+<form action="sub" style="text-align:center">
+    <div><p style="color:red"><u>Substraction of two numbers</u></p></div>
+    <br>
+    <div>Enter 1st number <input type="text" name="num3"></div>
+    <br>
+    <div>Enter 2nd number <input type="text" name="num4"></div>
+    <br>
+    <div><input type="submit"></div>
+</form>
+{% endblock %}
